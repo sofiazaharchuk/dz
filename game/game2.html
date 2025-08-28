@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sofiazah">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра</title>
+  <link rel="stylesheet" href="style67.css">
+</head>
+<body>
+
+    <header>
+        <div class="site-title">Загадки Нічного Лісу 🌌</div>
+        <nav>
+            <a href="dz26.html">Головна</a>
+            <a href="game2.html">Гра "Вгадай число"</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="game-container">
+            <h1>Випробування мудрості 🦉</h1>
+            <p>Лісові духи загадали число від 1 до 100. Чи зможете ви його знайти, керуючись лише їхніми підказками? Успіх чекає на того, хто вміє слухати...</p>
+            <div class="game-area">
+                <input type="number" id="guessInput" placeholder="Вгадайте число">
+                <button id="guessButton">Спробувати! ✨</button>
+            </div>
+            <p id="result"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Загадки Нічного Лісу. 🌙 Всі права захищені.</p>
+    </footer>
+
+    <script>
+        const secret = Math.floor(Math.random() * 100) + 1;
+        const guessInput = document.getElementById('guessInput');
+        const guessButton = document.getElementById('guessButton');
+        const resultDisplay = document.getElementById('result');
+        
+        guessButton.addEventListener('click', () => {
+            const guess = parseInt(guessInput.value);
+            
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                resultDisplay.textContent = 'Нашепчіть мені число від 1 до 100, не більше і не менше.';
+                return;
+            }
+            
+            if (guess === secret) {
+                resultDisplay.textContent = '🥳 Вітаю! Лісові духи відкривають вам свої таємниці!';
+                guessInput.disabled = true;
+                guessButton.disabled = true;
+            } else if (guess < secret) {
+                resultDisplay.textContent = 'Ліс шепоче: "Трохи більше!" ⬆️';
+            } else {
+                resultDisplay.textContent = 'Ліс шепоче: "Трохи менше..." ⬇️';
+            }
+            
+            guessInput.value = '';
+            guessInput.focus();
+        });
+    </script>
+
+</body>
+</html>
