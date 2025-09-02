@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sofiazah">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма реєстрації</title>
+  <link rel="stylesheet" href="style.for.css">
+</head>
+<body>
+
+    <div class="registration-container">
+        <h1>Реєстрація</h1>
+        <form id="registration-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Підтвердження пароля:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <div id="password-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Стать:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Чоловіча</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Жіноча</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Інша</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Країна:</label>
+                <select id="country" name="country" required>
+                    <option value="">Оберіть країну</option>
+                    <option value="ua">Україна</option>
+                    <option value="pl">Польща</option>
+                    <option value="de">Німеччина</option>
+                    <option value="us">США</option>
+                </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Я погоджуюсь з <a href="#">умовами</a></label>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Зареєструватися</button>
+                <button type="reset" class="reset-btn">Очистити</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('registration-form');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const passwordError = document.getElementById('password-error');
+
+        form.addEventListener('submit', function(event) {
+            // Перевірка, чи співпадають паролі
+            if (password.value !== confirmPassword.value) {
+                event.preventDefault(); // Забороняємо стандартну відправку форми
+                passwordError.textContent = 'Паролі не співпадають';
+            } else {
+                passwordError.textContent = ''; // Очищаємо повідомлення про помилку
+                // Якщо паролі співпадають, дозволяємо відправку форми
+                // Оскільки "action"="#" і "method"="post", сторінка оновиться
+            }
+        });
+    </script>
+
+</body>
+</html>
