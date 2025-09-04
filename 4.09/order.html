@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sofiazah">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Замовлення</title>
+  <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Аромат</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="order.html">Замовити</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#order-form">Форма замовлення</a></li>
+                <li><a href="#delivery-details">Доставка</a></li>
+            </ul>
+        </nav>
+
+        <article class="content">
+            <section id="order-form">
+                <h2>Форма замовлення</h2>
+                <p>
+                    Ви можете зробити попереднє замовлення або залишити відгук через цю форму.
+                     Ми з радістю виконаємо ваше замовлення або відповімо на всі питання.
+                </p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Ваше ім'я:</label>
+                        <input type="text" id="name" name="name" placeholder="Іван" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+380..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="drink-select">Оберіть напій:</label>
+                        <select id="drink-select" name="drink">
+                            <option value="">-- Виберіть напій --</option>
+                            <option value="Еспресо">Еспресо</option>
+                            <option value="Капучино">Капучино</option>
+                            <option value="Лате">Лате</option>
+                            <option value="Гарячий шоколад">Гарячий шоколад</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Оберіть десерт:</label>
+                        <div class="radio-group">
+                            <label for="cheesecake">Чізкейк</label>
+                            <input type="radio" id="cheesecake" name="dessert" value="Чізкейк">
+                            <label for="fondan">Фондан</label>
+                            <input type="radio" id="fondan" name="dessert" value="Фондан">
+                            <label for="croissant">Круасан</label>
+                            <input type="radio" id="croissant" name="dessert" value="Круасан">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Додаткові побажання:</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Вкажіть розмір напою, кількість, або інші побажання..."></textarea>
+                    </div>
+
+                    <button type="submit">Надіслати замовлення</button>
+                </form>
+            </section>
+
+            <section id="delivery-details">
+                <h2>Інформація про доставку та оплату</h2>
+                <p>
+                    Ми здійснюємо доставку по місту. Вартість доставки становить 70 грн. 
+                    При замовленні від 500 грн — доставка безкоштовна.
+                </p>
+                <p>
+                    Способи оплати:
+                </p>
+                <ul>
+                    <li>Онлайн-оплата картою на сайті.</li>
+                    <li>Готівкою або карткою при самовивозі.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Кав'ярня "Flavour". Всі права захищені.</p>
+    </footer>
+
+</body>
+</html>
