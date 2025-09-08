@@ -62,7 +62,7 @@ header {
     font-weight: 700;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: var(--secondary-color); /* Золотистий логотип */
+    color: var(--secondary-color); 
 }
 
 header nav ul {
@@ -113,7 +113,7 @@ header nav a:hover {
     background-color: var(--accent-color);
     padding: 2em 1.5em;
     position: sticky;
-    top: 30px; /* Фіксуємо для прокрутки */
+    top: 30px; 
     height: fit-content;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -141,7 +141,7 @@ header nav a:hover {
 }
 
 .side-nav a:hover {
-    background-color: rgba(44, 62, 80, 0.05); /* Легкий тінь */
+    background-color: rgba(44, 62, 80, 0.05); 
     border-left: 3px solid var(--secondary-color);
     transform: translateX(3px);
 }
@@ -245,7 +245,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #e6b800; /* Темніше золото */
+    background-color: #e6b800;
     transform: translateY(-2px);
 }
 
